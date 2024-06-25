@@ -4,7 +4,9 @@
 [Platformer](#platformer)<br>
 &nbsp;&nbsp;&nbsp;[Open 'Platformer' from Unicorn Suite Hybrid Black](#open-platformer-from-unicorn-suite-hybrid-black)<br>
 &nbsp;&nbsp;&nbsp;[Platformer Gameplay](#platformer-gameplay)<br>
-
+[Puzzle Game](#puzzle-game)<br>
+&nbsp;&nbsp;&nbsp;[Open 'Puzzle Game' from Unicorn Suite Hybrid Black](#open-puzzle-game-from-unicorn-suite-hybrid-black)<br>
+&nbsp;&nbsp;&nbsp;[Puzzle Game Gameplay](#puzzle-game-gameplay)<br>
 # Brainbuddy
 
 Developed during a BCI game jam 2022 for impaired children, this platformer game utilizes a brain-computer interface (BCI) for control. Players can engage in multiplayer mode, with one player controlling the character via keyboard input and the other using the BCI. Alternatively, the game can be played solo by simultaneously controlling the character with both the keyboard and BCI. The objective is to collect fruits scattered throughout the game world. Success relies on effectively coordinating control between the BCI and keyboard, making it necessary to master both input methods to complete the game. This inclusive and challenging gaming experience encourages cognitive and motor skill development while fostering cooperation in multiplayer gameplay.
@@ -70,7 +72,7 @@ In this unique platformer game, players must simultaneously control both the key
 
 ## Open 'Platformer' from Unicorn Suite Hybrid Black
 
-Open the Unicorn Suite Hybrid Black, select “Apps” and than “Platformer”. Next you need to select your device and click on “open”.
+Open the Unicorn Suite Hybrid Black, select “Apps” and then “Platformer”. Next you need to select your device and click on “open”.
 
 ## Platformer Gameplay
 Select your device and click  'connect'.
@@ -111,4 +113,126 @@ The finishh area is the brightly colored area at the end of the map.
 
 <p align="center">
 <img src="./img/g8.png" alt="drawing" width="700"/><br/>
+</p>
+
+# Puzzle Game
+
+Players can control the game simply by using their thoughts. With the ability to select adn flip puzzle pieces mentally in just seconds, completing the image becomes a thrilling and engaging challenge. Test it out to tune your concentration performance.
+
+## Open 'Puzzle Game' from Unicorn Suite Hybrid Black
+
+Open the Unicorn Suite Hybride Black, select "Apps" and then "Puzzle Game". Next, you need to select your device and click on "Open".
+
+## Puzzle Game Gameplay
+
+Select your device and click 'connect'.
+
+<p align="center">
+<img src="./img/g18.png" alt="drawing" width="700"/><br/>
+</p>
+
+You will see the following launching window.
+
+<p align="center">
+<img src="./img/g19.png" alt="drawing" width="800"/><br/>
+</p>
+
+In the device dropdown menu, you can view all paired unicorn devices with your PC. Please pick the serial number associated with your unicorn. If you don't have a unicorn device next to you, please select the serial number `UN-0000.00.00`, which represents a unicorn simulator.
+
+The season number is shown on the upperleft corner. Each season, we will update the picture sets used in the Puzzle game. 
+
+There are multiple phases for the puzzle game.
+- **Connection phase**: Establishing the bluetooth connection between the unicorn hybrid black and the PC.
+- **Charging phase**: Loading up your mental power (ie. train a classifier) to select puzzle pieces with BCI.
+- **Game phase**
+
+## Charging Session
+After connecting to the device, the following screen will be shown to players.This session intended to train a classifier used for selecting puzzles with BCI. The whole charging session takes around 1 minute.
+<p align="center">
+<img src="./img/g20.png" alt="drawing" width="800"/><br/>
+</p>
+
+Some important points to note:
+- The **topoplot** on the right indicates the signal quality of each EEG channel with positional information.
+
+    - Green: Good EEG channel
+    - Red: Bad EEG channel
+
+- **Progress Bar** below `START!` button shows the state of charging, which increases overtime.
+    <p align="center">
+    <img src="./img/g26.png" alt="drawing" width="220"/>
+    <img src="./img/g27.png" alt="drawing" width="200"/>
+    <img src="./img/g28.png" alt="drawing" width="200"/>
+    <br/>
+    </p>
+- `START!` button: When all EEG channels have good signal quality, press this button to **start the Charging session**.
+- **MENTAL STATE** indicate how powerful you will be able to select the puzzle pieces later in the game. The number of stars will be updated after the charging session. The more stars you have, the better your BCI performance will be. See the following screenshot as reference.
+
+    - 3 Stars: A perfect classifier. In 3-5 seconds, you will be able to pick a puzzle piece.
+    - 2 Stars: An ok classifier. In 6-9 seconds, you can select a puzzle piece.
+    - 1 Star: A bad classifier. You need to take more to 10 seconds to select a puzzle piece
+
+<p align="center">
+<img src="./img/g24.png" alt="drawing" width="800"/><br/>
+</p>
+
+**Note**: 
+- If your **MENTAL STATE** is: 
+
+    - 1 star, please re-do the Charging session for a better performance.
+    - 2 stars: It is recommended to re-do the Charging session. But, you could also proceed to the **Dashboard**.
+    - 3 stars: Proceed to **Dashboard**
+
+- Click `RECHARGE!` to re-do the Charging session.
+- Click `DASHBOARD` to proceed to the **Dashboard**.
+
+## DashBoard
+**Dashboard** is the main page of the Puzzle game. You can:
+
+- Check your overal scores in game, **ROYALE**
+- Check your **achievement (stars)** next to each image
+- Unlock new images
+- Select your image used in the puzzle game
+- Exit the game
+<p align="center">
+<img src="./img/g25.png" alt="drawing" width="800"/><br/>
+</p>
+
+Select 1 image and click `PLAY`
+<p align="center">
+<img src="./img/g29.png" alt="drawing" width="800"/><br/>
+</p>
+
+## Game
+You should see your **selected image** with some **puzzle pieces** on top. Now, you can focus on any puzzle piece. With a perfect **MENTAL STATE**, you should be able to select the piece in 3-5 seconds.
+<p align="center">
+<img src="./img/g30.png" alt="drawing" width="800"/><br/>
+</p>
+
+Note:
+- When you selected a puzzle piece, there will be a **light-blue background** below the piece. 
+- You have to stay focus for **3 seconds** in order to eliminate the piece.
+- The topoplot is used for signal quality check.
+
+### Finish 1 image
+When all puzzle pieces on top of the image have been eliminated, you can:
+- Click `CONTINUE` to play with the next image. 
+    - If you didn't unlock all images, the system will detect the **locked images**, select one of them **randomly** and start the next game.
+    - If you have unlocked all images, the system will **randomly** pick 1 image, and start the next game.
+    <p align="center">
+    <img src="./img/g31.png" alt="drawing" width="800"/><br/>
+    </p>
+- There is a `panel` button on the upperright corner. You can click the button <img src="./img/g32.png" alt="drawing" width="25"/>. The following **panel** will pop up.
+    <p align="center">
+    <img src="./img/g33.png" alt="drawing" width="800"/><br/>
+    </p>
+
+    You can:
+    - Click `BACK TO HOME` return to **Dashboard** and pick another image.
+    - Exit the game.
+
+### Achievements
+You can check your performance for individual image in the **Dashboard**.
+<p align="center">
+<img src="./img/g34.png" alt="drawing" width="800"/><br/>
 </p>
